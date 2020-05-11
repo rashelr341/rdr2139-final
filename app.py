@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 #static route
 @app.route("/")
-def hello():
+def home():
     return render_template("index.html")
 
 @app.route('/assignments/')

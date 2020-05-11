@@ -10,6 +10,8 @@
     <head>
     
     <body>
+        {% extends "navigation.html" %}
+        {% block content %}
         <h1>Rashel D. Rojas</h1>
         
         <img src="/static/images/profile.jpg" alt="My picture.">
@@ -21,15 +23,9 @@
         to take yet, but I am highly interested in Artificial Intelligence
         and Machine Learning.</p>
         
-        <div class="menu"><strong>
-            <ul>
-                <li><a href="{{ url_for('assignments') }}">My Assignments</a></li>
-                <li><a href="{{ url_for('classes') }}">My Classes</a></li>
-            </ul>
-        </strong></div>
-        
         <p>Favorite Website: <a href="https://www.ulta.com/">Ulta</a></p>
         <p>(I blame quarantine for my newfound online shopping addiction)</p>        
-       
+        {% endblock %}
+
     </body>
 </html>
