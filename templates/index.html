@@ -2,29 +2,63 @@
 <html>
     <head>
         <title>Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">        
         <style>
-            img {
-              width: 25%;
+            #profile {
+                width: 25%;
+                border-radius: 50%;
+                margin-bottom: 4%;
+            }  
+            
+            .icon {
+                display:block;
+                width: 100px;
+                margin-top: 80px;
             }
+            
+            #icon1 {
+               
+                float: left; 
+                margin-left: 200px; 
+            
+            }
+            
+            #icon2 {
+                float: right; 
+                margin-right: 200px; 
+            
+            }
+             
         </style>
-    <head>
+
+    </head>
     
     <body>
         {% extends "navigation.html" %}
         {% block content %}
-        <h1>Rashel D. Rojas</h1>
         
-        <img src="/static/images/profile.jpg" alt="My picture.">
-
-        <p>Current Grade: 96.33% </p>
+        <div class= "parallax">
+            <div id="ontop">           
+                <img id= "profile" src="/static/images/profile.jpg" alt="Profile.">
+                <a href="#main">Rashel Rojas</a> 
+            </div>
+        </div>
         
-        <p>I am a rising sophomore at Columbia University and I
-        plan to major in Computer Science. I am unsure of which track
-        to take yet, but I am highly interested in Artificial Intelligence
-        and Machine Learning.</p>
-        
-        <p>Favorite Website: <a href="https://www.ulta.com/">Ulta</a></p>
-        <p>(I blame quarantine for my newfound online shopping addiction)</p>        
+        <div id= "main">
+            <img class="icon" id="icon1" src="static/images/icon1.png">
+            <img class="icon" id="icon2" src="static/images/icon2.png">
+            <h1>About Me</h1>
+            <br><br>
+            <p>Current Grade: 96.33% </p>
+            <br>
+            <p>I am a rising sophomore at Columbia University and I
+            plan to major in Computer Science. I am unsure of which track
+            to take yet, but I am highly interested in Artificial Intelligence
+            and Machine Learning.</p>
+            <br>
+            <p>Favorite Website: <a href="https://www.ulta.com/">Ulta</a></p>
+        </div>
+           
         {% endblock %}
 
     </body>

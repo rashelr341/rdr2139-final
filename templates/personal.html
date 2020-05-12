@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">        
+        <style>
+            #profile {
+              width: 25%;
+            }
+            
+        </style>
+
+    </head>
+    
+    <body>
+        {% extends "navigation.html" %}
+        {% block content %}
+        
+        <div class = "parallax"></div>
+            <div style="height:1000px;background-color:red;font-size:24px">
+            <h1>Rashel Rojas</h1>
+            
+            <!--<img id = "background" src="/static/images/background.png" alt="Background.">-->
+            
+            <img id = "profile" src="/static/images/profile.jpg" alt="Profile.">
+            
+            <p>I am a rising sophomore at Columbia University and I
+            plan to major in Computer Science. I am unsure of which track
+            to take yet, but I am highly interested in Artificial Intelligence
+            and Machine Learning.</p>
+            </div>
+            
+        <div class="parallax"></div>
+       {% endblock %}
+
+    </body>
+</html>

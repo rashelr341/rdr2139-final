@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
     <body>
-    
-        <div class="navbar"><strong>
-            <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('assignments') }}">Assignments</a></li>
-                <li><a href="{{ url_for('classes') }}">Classes</a></li>
-              </ul>
-          </strong></div>      
+        <div id="navbar"><strong>
+            <a href="{{ url_for('fun') }}">FOR FUN</a></li>
+            <a href="{{ url_for('classes') }}">CLASSES</a>
+            <a class="active" href="{{ url_for('home') }}">ABOUT</a>             
+         </strong></div>      
         {% block content %}
         {% endblock %}
         

@@ -16,13 +16,13 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route('/assignments/')
-def assignments():
-    return render_template('assignments.html')
-
 @app.route('/classes/')
 def classes():
     return render_template('classes.html')
+
+@app.route('/fun/')
+def fun():
+    return render_template('fun.html')
 
 @app.route("/1006")
 def homepage_1006():
