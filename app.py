@@ -14,15 +14,15 @@ app = Flask(__name__)
 #static route
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html", active='home')
 
 @app.route('/classes/')
 def classes():
-    return render_template('classes.html')
+    return render_template('classes.html', active='classes')
 
 @app.route('/fun/')
 def fun():
-    return render_template('fun.html')
+    return render_template('fun.html', active="fun")
 
 @app.route("/1006")
 def homepage_1006():

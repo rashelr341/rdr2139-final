@@ -2,9 +2,9 @@
 <html>
     <body>
         <div id="navbar"><strong>
-            <a href="{{ url_for('fun') }}">FOR FUN</a></li>
-            <a href="{{ url_for('classes') }}">CLASSES</a>
-            <a class="active" href="{{ url_for('home') }}">ABOUT</a>             
+            <a class="{% if active=='fun' %}active{%endif %}" href="{{ url_for('fun') }}">FOR FUN</a></li>
+            <a class="{% if active=='classes' %}active{%endif %}" href="{{ url_for('classes') }}">CLASSES</a>
+            <a class="{% if active=='home' %}active{%endif %}" href="{{ url_for('home') }}">ABOUT</a>             
          </strong></div>      
         {% block content %}
         {% endblock %}

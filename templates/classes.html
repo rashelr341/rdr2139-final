@@ -2,55 +2,76 @@
 <html>
     <head>
         <title>Classes</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">     
+        <style>
+            #firstPic {
+                width: 30%;
+            }
+            
+            ol {
+                text-align: left;
+            
+            }
+            
+        </style>   
     </head>
+    
     <body>
         {% extends "navigation.html" %}
         {% block content %}
-        <h1>Classes I've Taken This Semester</h1>
-                
-        <ol>
-            <li>Data Structures in Java</li>
-            <p>This has probably been my favorite class to take this semster.
-            Not only is Blaer an amazing professor whose humor and deep 
-            understanding of programming concepts can make any lecture one to
-            enjoy, but this class is fundamental if one wants to have a future 
-            in computer programming. After Blaer's class, I feel prepared to
-            apply my knowledge in my own personal projects.</p>
-            
-            <li>Physics: Introduction to Electricity, Magnetism, and Optics</li>
-            <p>Although physics isn't my forte, I did enjoy this class as well 
-            as Tanya's lecture. I'm just glad I don't have to take another 
-            physics class for my major, unlike a few of my MechE friends.</p>
-            
-            <li>Introduction to Computing for Engineers and Applies Scientists</li>
-            <p>This has to be my second favorite class. Java will always have
-            a place in my heart, I'm sorry Python. I do have to say that although
-            I had some programming experience before this class, I found this 
-            course to be one of the difficult intro to CS classes I've ever 
-            taken. Some of the assignments were a bit vague and one was definately
-            beyond my understanding of physics, but I don't regret having to 
-            take this course. It brought to the table something that other
-            intro prorgramming classes don't: application to the real world.
-            We learned how to plot an object's projectile motion, how to 
-            determine if a tumor is benign or malignant using a database, etc.</p>
-            
-            <li>Introduction to Experimental Physics</li>
-            <p>This class is a physics lab class, in which we learned how to 
-            write a college-level lab report and perform various experiments
-            in a lab environment. Not my favorite class, but I did learn
-            many skills that I can apply when I write my thesis in graduate
-            school. </p>
-            
-            <li>Physical Education: Strength Training</li>
-            <p>Forced to take a PE course, I dreaded the day I'd have to 
-            walk into the college gym and (gasp) exercise. However, I've come to
-            find out that I actually like strength training! I've learned many
-            muscle-building routines that I continue to implement today. The one
-            regret I do have about this class is that I never tried to bench
-            press. Hopefully, after quarantine is over and we can return to
-            campus, I can complete this goal of mine. </p>
-        </ol>        
+        <div class= "parallax">
+            <div id="ontop">    
+                <img id= "firstPic" src="/static/images/class.jpg" alt="College.">       
+                <a href="#main">Classes I've Taken This Semester</a> 
+            </div>
+        </div>
         
+        
+        <div id= "main">
+            <h1>Classes I've Taken This Semester</h1><br>
+                    
+            <ol>
+                <li><h2>Data Structures in Java</h2>
+                This has probably been my favorite class of all this semester.
+                Not only is Blaer an amazing professor full of humorous stories, 
+                but his ability to answer any question can make any lecture easy 
+                to follow. After Blaer's class, I am confident that I can apply 
+                my new skills to future projects.</li>
+                                
+                <li><h2>Physics: Introduction to Electricity, Magnetism, and Optics</h2>
+                Although physics isn't my forte, I did enjoy this class. I'm just 
+                glad my major doesn't require another physics course, unlike 
+                a few of my MechE friends.</li>
+                
+                <li><h2>Introduction to Computing for Engineers and Applied Scientists</h2>
+                This is probably my second favorite class. Java will always have
+                a place in my heart, I'm sorry Python. I do have to say that although
+                I had some coding experience prior to this class, I found this to
+                be one of the most difficult intro to CS classes I've ever 
+                taken. Nevertheless, I don't regret it because it brought to the table 
+                something that the other classes didn't: real-life applications
+                to the world. My favorite assignment has to be the library we 
+                built to determine if a tumor was benign or malignant based on
+                a database of known tumors.</li>
+                
+                <li><h2>Introduction to Experimental Physics</h2>
+                This was a physics lab class where we learned how to 
+                write a college-level lab report and perform various experiments
+                in a lab environment. Not my favorite class, but I did learn
+                several skills that I will apply when writing my thesis in graduate
+                school.</li>
+                
+                <li><h2>Physical Education: Strength Training</h2>
+                Forced to take a PE course, I dreaded the day I'd have to 
+                walk into the college gym and (gasp) exercise. However, I soon
+                learned that I liked strength training! I've learned many
+                muscle-building routines that I continue to implement today. 
+                The one regret I do have about this class is that I never tried 
+                to bench press. Hopefully, after quarantine is over and we 
+                can return to campus, I can complete this goal of mine. </li>
+            </ol>        
+            <br>
+        </div>        
         
         {% endblock %}
         
