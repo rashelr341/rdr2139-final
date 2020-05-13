@@ -6,6 +6,7 @@ body {
     color: black;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+
 html {
     height: 100%;
     scroll-behavior: smooth;
@@ -19,6 +20,7 @@ p {
     font-size: 18px;
 }
 
+/* Creates background image that moves with scroll but hidden by next div */
 .parallax {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/background.png");
     height: 100%; 
@@ -57,6 +59,7 @@ p, h1 {
     margin-right: auto;
 } 
 
+/* Table in fun.html */
 table {
     width:50%; 
     margin-left: auto;
@@ -100,6 +103,7 @@ td:hover .caption {
     height: 20%;
 }
 
+/* Caption for each cat picture in fun.html appears when user hovers over picture.*/
 .text {
     color: #333;
     font-size: 20px;
@@ -117,8 +121,7 @@ li {
     width: 40%;
 }
 
-
-
+/* For button that when clicked, scrolls page to next div */
 #ontop a:link, #ontop a:visited {
     background: none;
     border: 3px solid white;
@@ -136,6 +139,7 @@ li {
     transition: 0.5s; 
 }
 
+/* Navigation bar on each page. */
 #navbar {
     background-color: #333;
     overflow: hidden;
@@ -155,13 +159,11 @@ li {
   font-size: 120%;
 }
 
-/* Change the color of links on hover */
 #navbar a:hover {
   color: skyblue;
   border-bottom-color: skyblue;
 }
 
-/* Add a color to the active/current link */
 #navbar a.active {
   color: skyblue;
   border-bottom-color: skyblue;

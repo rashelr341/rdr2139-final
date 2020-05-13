@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 21 14:57:17 2020
-
-@author: etill
-"""
+#####################################################################
+# Name: Rashel Rojas
+# Uni: rdr2139
+# Flask file for linking other pages of this website.
+#####################################################################
 
 #import statements
 from flask import Flask, render_template
@@ -23,10 +22,6 @@ def classes():
 @app.route('/fun/')
 def fun():
     return render_template('fun.html', active="fun")
-
-@app.route("/1006")
-def homepage_1006():
-  return render_template("1006.html")
 
 #start the server
 if __name__ == "__main__":
